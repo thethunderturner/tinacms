@@ -454,8 +454,8 @@ catalogs:
       specifier: ^1.0.6
       version: 1.0.6
     jsonpath-plus:
-      specifier: 10.2.0
-      version: 10.2.0
+      specifier: 10.3.0
+      version: 10.3.0
     lowlight:
       specifier: ^3.3.0
       version: 3.3.0
@@ -1527,7 +1527,7 @@ importers:
         version: 3.14.1
       jsonpath-plus:
         specifier: 'catalog:'
-        version: 10.2.0
+        version: 10.3.0
       many-level:
         specifier: 'catalog:'
         version: 2.0.0
@@ -2305,8 +2305,8 @@ importers:
         specifier: 'catalog:'
         version: 0.424.0(react@18.3.1)
       mermaid:
-        specifier: 10.9.4
-        version: 10.9.4
+        specifier: 10.9.5
+        version: 10.9.5
       moment:
         specifier: 'catalog:'
         version: 2.29.4
@@ -11046,8 +11046,8 @@ packages:
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
 
-  jsonpath-plus@10.2.0:
-    resolution: {integrity: sha512-T9V+8iNYKFL2n2rF+w02LBOT2JjDnTjioaNFrxRy0Bv1y/hNsqR/EBK7Ojy2ythRHwmz2cRIls+9JitQGZC/sw==}
+  jsonpath-plus@10.3.0:
+    resolution: {integrity: sha512-8TNmfeTCk2Le33A3vRRwtuworG/L5RrgMvdjhKZxvyShO+mBu2fP50OWUjRLNtvw344DdDarFh9buFAZs5ujeA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -11509,8 +11509,8 @@ packages:
   mermaid@10.9.3:
     resolution: {integrity: sha512-V80X1isSEvAewIL3xhmz/rVmc27CVljcsbWxkxlWJWY/1kQa4XOABqpDl2qQLGKzpKm6WbTfUEKImBlUfFYArw==}
 
-  mermaid@10.9.4:
-    resolution: {integrity: sha512-VIG2B0R9ydvkS+wShA8sXqkzfpYglM2Qwj7VyUeqzNVqSGPoP/tcaUr3ub4ESykv8eqQJn3p99bHNvYdg3gCHQ==}
+  mermaid@10.9.5:
+    resolution: {integrity: sha512-eRlKEjzak4z1rcXeCd1OAlyawhrptClQDo8OuI8n6bSVqJ9oMfd5Lrf3Q+TdJHewi/9AIOc3UmEo8Fz+kNzzuQ==}
 
   mermaid@11.12.1:
     resolution: {integrity: sha512-UlIZrRariB11TY1RtTgUWp65tphtBv4CSq7vyS2ZZ2TgoMjs2nloq+wFqxiwcxlhHUvs7DPGgMjs2aeQxz5h9g==}
@@ -26129,7 +26129,7 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
-  jsonpath-plus@10.2.0:
+  jsonpath-plus@10.3.0:
     dependencies:
       '@jsep-plugin/assignment': 1.3.0(jsep@1.4.0)
       '@jsep-plugin/regex': 1.0.4(jsep@1.4.0)
@@ -26726,7 +26726,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mermaid@10.9.4:
+  mermaid@10.9.5:
     dependencies:
       '@braintree/sanitize-url': 6.0.4
       '@types/d3-scale': 4.0.9
@@ -26735,9 +26735,9 @@ snapshots:
       cytoscape-cose-bilkent: 4.1.0(cytoscape@3.31.1)
       d3: 7.9.0
       d3-sankey: 0.12.3
-      dagre-d3-es: 7.0.10
+      dagre-d3-es: 7.0.13
       dayjs: 1.11.19
-      dompurify: 3.1.6
+      dompurify: 3.3.0
       elkjs: 0.9.3
       katex: 0.16.25
       khroma: 2.1.0
