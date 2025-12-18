@@ -10,8 +10,8 @@ catalog:
     "@aws-sdk/client-s3": ^3.744.0
     "@aws-sdk/s3-request-presigner": ^3.744.0
     "@azure/storage-blob": ^12.26.0
-    "@biomejs/biome": ^1.9.4
-    "@changesets/changelog-github": ^0.5.0
+    "@biomejs/biome": ^2.3.10
+    "@changesets/changelog-github": ^0.5.2
     "@changesets/cli": 2.29.8
     "@clerk/backend": 2.27.1
     "@clerk/clerk-js": 5.115.0
@@ -71,7 +71,7 @@ catalog:
     "@types/micromatch": ^4.0.9
     "@types/multer": ^1.4.12
     "@types/normalize-path": ^3.0.2
-    "@types/picomatch": ^3.0.2
+    "@types/picomatch": ^4.0.2
     "@types/prettier": ^2.7.3
     "@types/progress": ^2.0.7
     "@types/prompts": ^2.4.9
@@ -191,7 +191,7 @@ catalog:
     postcss-import: ^14.1.0
     postcss-nesting: ^10.2.0
     prettier: ^2.8.8
-    pretty-quick: ^3.3.1
+    pretty-quick: ^4.2.2
     prism-react-renderer: ^2.4.1
     progress: ^2.0.3
     prompts: ^2.4.2
@@ -224,7 +224,7 @@ catalog:
     tsc-alias: ^1.8.10
     tslib: ^2.8.1
     tsup: ^8.3.6
-    turbo: ^2.5.3
+    turbo: ^2.6.3
     typanion: 3.13.0
     typedoc: ^0.28.15
     typedoc-plugin-markdown: ^3.17.1
