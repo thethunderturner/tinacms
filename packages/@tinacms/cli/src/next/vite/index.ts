@@ -7,7 +7,6 @@ import {
   type BuildOptions,
   type InlineConfig,
   type Plugin,
-  splitVendorChunkPlugin,
 } from 'vite';
 import type { ConfigManager } from '../config-manager';
 import { tinaTailwind } from './tailwind';
@@ -242,12 +241,20 @@ export const createConfig = async ({
       sourcemap: false,
       outDir: configManager.outputFolderPath,
       emptyOutDir: true,
-      rollupOptions: rollupOptions,
+      rollupOptions: {
+        ...rollupOptions,
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
+          },
+        },
+      },
     },
     plugins: [
       /**
-       * `splitVendorChunkPlugin` is needed because `tinacms` is quite large,
-       * Vite's chunking strategy chokes on memory issues for smaller machines (ie. on CI).
+       * Vite 7 removed splitVendorChunkPlugin; use rollupOptions.output.manualChunks instead.
        */
       react({
         babel: {
@@ -256,7 +263,6 @@ export const createConfig = async ({
         },
         fastRefresh: false,
       }),
-      splitVendorChunkPlugin(),
       tinaTailwind(configManager.spaRootPath, configManager.prebuildFilePath),
       ...plugins,
     ],
