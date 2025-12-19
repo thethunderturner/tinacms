@@ -11,6 +11,7 @@ import { Popover, PopoverContent, PopoverTrigger } from './popover';
 import moment from 'moment';
 import 'moment-timezone';
 import { enUS } from 'date-fns/locale';
+import type { Locale } from 'date-fns';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
 import * as React from 'react';
@@ -286,7 +287,7 @@ function Calendar({
 }) {
   const MONTHS = React.useMemo(() => {
     let locale: Pick<Locale, 'options' | 'localize' | 'formatLong'> = enUS;
-    const { options, localize, formatLong } = (localeOverride as any) || {};
+    const { options, localize, formatLong } = (localeOverride as Locale) || {};
     if (options && localize && formatLong) {
       locale = { options, localize, formatLong };
     }
@@ -897,7 +898,7 @@ const DateTimePicker = React.forwardRef<
             onSelect={handleDaySelect}
             initialMonth={value ?? defaultPopupValue}
             yearRange={yearRange}
-            locale={locale as any}
+            locale={locale as DayPickerProps['locale']}
             {...props}
           />
           {granularity !== 'day' && (
