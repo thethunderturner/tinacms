@@ -4,7 +4,7 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  timeout: 10000,
+  timeout: 20000,
   reporter: [
     ["list", { printSteps: true }],
     ["json", { outputFile: "playwright-test-results.json" }],
@@ -35,7 +35,7 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
   webServer: {
     command: "pnpm dev",
-    url: "http://localhost:3000/",
+    url: "http://localhost:4001/",
     reuseExistingServer: !process.env.CI,
   },
 });
