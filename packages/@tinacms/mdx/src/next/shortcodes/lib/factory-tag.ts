@@ -96,7 +96,7 @@ export function factoryTag(
       tagOpenerIndex++;
       return tagOpenerSequence;
     }
-    return nok(code); 
+    return nok(code);
   };
 
   const afterStart: State = function (code) {
@@ -505,14 +505,14 @@ export function factoryTag(
         tagCloserIndex = 0;
         return nok(code);
       };
-      
+
       // Enter marker
       effects.enter(markerType);
       effects.consume(code);
       if (pattern.end.length === 1) {
-         effects.exit(markerType);
-         effects.exit(tagType);
-         return ok;
+        effects.exit(markerType);
+        effects.exit(tagType);
+        return ok;
       } else {
         return tagCloserSequence;
       }

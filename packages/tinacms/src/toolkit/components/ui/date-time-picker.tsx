@@ -247,7 +247,11 @@ const formatCurrentDate = ({
   dateFormat,
   timeFormat,
   displayDate,
-}: { dateFormat?: string; timeFormat?: string; displayDate: Date }) => {
+}: {
+  dateFormat?: string;
+  timeFormat?: string;
+  displayDate: Date;
+}) => {
   if (!dateFormat && !timeFormat) {
     console.error('DateTimePicker: Missing date or time format');
     return 'Error: Missing date or time format';

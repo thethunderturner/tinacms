@@ -3,11 +3,7 @@ import type { Database } from '@tinacms/graphql';
 import react from '@vitejs/plugin-react';
 import fs from 'fs-extra';
 import normalizePath from 'normalize-path';
-import {
-  type BuildOptions,
-  type InlineConfig,
-  type Plugin,
-} from 'vite';
+import { type BuildOptions, type InlineConfig, type Plugin } from 'vite';
 import type { ConfigManager } from '../config-manager';
 import { tinaTailwind } from './tailwind';
 

@@ -35,7 +35,7 @@ describe('The schema validation', () => {
         ],
       })
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      "[Error: Global templates are not yet supported]"
+      '[Error: Global templates are not yet supported]'
     );
   });
 
@@ -81,7 +81,7 @@ describe('The schema validation', () => {
         ],
       })
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      "[ValidationError: path is a required field]"
+      '[ValidationError: path is a required field]'
     );
   });
 
