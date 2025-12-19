@@ -286,7 +286,7 @@ function Calendar({
 }) {
   const MONTHS = React.useMemo(() => {
     let locale: Pick<Locale, 'options' | 'localize' | 'formatLong'> = enUS;
-    const { options, localize, formatLong } = localeOverride || {};
+    const { options, localize, formatLong } = (localeOverride as any) || {};
     if (options && localize && formatLong) {
       locale = { options, localize, formatLong };
     }
@@ -835,7 +835,7 @@ const DateTimePicker = React.forwardRef<
     );
 
     let loc = enUS;
-    const { options, localize, formatLong } = locale;
+    const { options, localize, formatLong } = locale as any;
     if (options && localize && formatLong) {
       loc = {
         ...enUS,
@@ -897,7 +897,7 @@ const DateTimePicker = React.forwardRef<
             onSelect={handleDaySelect}
             initialMonth={value ?? defaultPopupValue}
             yearRange={yearRange}
-            locale={locale}
+            locale={locale as any}
             {...props}
           />
           {granularity !== 'day' && (
