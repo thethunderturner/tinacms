@@ -22,23 +22,17 @@ export async function checkMarkdownOutput(
   await page.getByTestId("markdown-button").click();
 
   // Fill in the text with the specified markdown syntax
-  const rawEditor = page.locator('div[role="textbox"]');
-  await rawEditor.focus();
-  
-  await page.keyboard.type(inputText);
+  // The body textarea has no name attribute, so we cant filter and thus get 2 results
+  await page.getByRole("textbox").fill(inputText);
 
-  // Switch back to Rich Text mode
-  await page.getByTestId("markdown-button").click();
+  // Content is rendered by iframe
+  const iframe = page.frameLocator('iframe[data-test="tina-iframe"]');
 
-  // Content is rendered in the rich text editor (Slate)
-  // We locate the editor by role="textbox" which is consistent with other tests
-  const richTextEditor = page.locator('div[role="textbox"]');
-
-  // Locate the expected tag inside the editor content and check if it contains the correct text
-  const element = richTextEditor.locator(expectedTag);
+  // Locate the expected tag inside the iframe content and check if it contains the correct text
+  const element = iframe.locator(expectedTag);
 
   // Assert that the expected element exists
-  await expect(element).toBeVisible({ timeout: 10000 });
+  await expect(element).toBeVisible();
 
   // Assert that the expected element contains the correct text
   await expect(element).toHaveText(expectedText);
