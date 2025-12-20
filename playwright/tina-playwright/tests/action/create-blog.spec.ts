@@ -3,8 +3,7 @@ import deleteBlogPost from "../../utils/deleteBlogPost";
 
 test.describe("Create Blog Post", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto(
-      "http://localhost:4001/admin/index.html#/collections/new/post/~/",
+    await page.goto("http://localhost:4001/admin/index.html#/collections/new/post/~/",
       { waitUntil: "domcontentloaded" }
     );
     //Need to dismiss the popup dialog to enter edit mode
@@ -20,7 +19,7 @@ test.describe("Create Blog Post", () => {
   test("should be able to create a blog", async ({ page }) => {
     await page.fill('input[name="title"]', blogTitle);
 
-    await page.fill('textbox[name="body"]', blogContent);
+    await page.locator('div[role="textbox"]').fill(blogContent);
 
     await page.fill('input[name="filename"]', blogFilename);
 
