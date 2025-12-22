@@ -4,7 +4,7 @@ import { checkMarkdownOutput } from "./markdown-parsing-utils";
 //Skipping this test due to new line is not supported
 test.skip("should be able to parse newline from markdown", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("http://localhost:4001/admin/index.html#/~", {
+    await page.goto("http://localhost:3000/admin/index.html#/~", {
       waitUntil: "domcontentloaded",
     });
 
